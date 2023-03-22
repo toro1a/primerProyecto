@@ -44,6 +44,14 @@ class miControlador extends Controller
         return view("contacto");
     }
 
+    public function galeria(){
+
+        $alumnos = ["Ana", "Sara","Antonio", "Manuel"];
+        //$alumnos = [];
+
+        return view("galeria", compact("alumnos"));
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

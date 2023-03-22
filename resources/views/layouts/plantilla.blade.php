@@ -3,55 +3,23 @@
         <head>
             <meta charset = "UTF-8">
             <title>Documento</title>
-
-            <style>
-
-                .contenedor{
-
-                    background-color:red;
-                    text-align:center;
-                }
-
-                .infoGeneral{
-
-                    background-color:blue;
-                    text-align:center;
-                    margin: 200px 0;
-                    color:white;
-
-                }
-
-                .pie{
-
-                    background-color:yellow;
-                    text-align:center;
-
-                }
-
-            </style>
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+            <script src="{{ asset('js/bootstrap.min.js"></script>
         </head>
 
         <body>
-
-            <div class ="contenedor">
-
+            
+            @include("layouts.navbar")
             @yield("cabecera")
 
-            </div>
-
-            <div class ="infoGeneral">
-
+            
+            @include("layouts.card")
             @yield("infoGeneral")
 
-            </div>
-
-            <div class = "pie">
 
             @yield("pie")
 
             <p>Aquí iría el pie de la página</p>
-
-            </div>
 
         </body>
 
